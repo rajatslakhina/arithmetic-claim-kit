@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="560" viewBox="0 0 1180 560">
+<rect width="1180" height="560" rx="12" fill="#0f172a"/>
+<defs><marker id="a" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#94a3b8"/></marker></defs>
+<text x="590.0" y="36" fill="#e2e8f0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">ArithmeticClaimKit</text>
+<text x="590.0" y="60" fill="#94a3b8" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle">does&#160;the&#160;arithmetic&#160;an&#160;answer&#160;states&#160;on&#160;its&#160;own&#160;hold,&#160;once&#160;it&#160;is&#160;done&#160;exactly?</text>
+<rect x="30" y="90" width="220" height="100" rx="8" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="140.0" y="114" fill="#f8fafc" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">ProviderGatewayKit</text>
+<text x="140.0" y="136" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">sends&#160;the&#160;turn</text>
+<text x="140.0" y="154" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">the&#160;answer&#160;comes&#160;back</text>
+<rect x="290" y="90" width="300" height="190" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+<text x="440.0" y="114" fill="#f8fafc" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">ArithmeticReader</text>
+<text x="440.0" y="136" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">Lexer:&#160;numbers&#160;as&#160;written&#160;($,&#160;%,&#160;k,&#160;million,</text>
+<text x="440.0" y="154" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">lakh,&#160;units),&#160;symbols,&#160;words,&#160;LaTeX;</text>
+<text x="440.0" y="172" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">fenced&#160;code,&#160;list&#160;markers,&#160;algebra&#160;skipped</text>
+<text x="440.0" y="190" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">ChainReader:&#160;=&#160;&#8776;&#160;is&#160;equals,&#160;&quot;,&#160;which&#160;is&quot;,</text>
+<text x="440.0" y="208" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">rewrites&#160;and&#160;run-on&#160;chains,&#160;12&#160;is&#160;15%&#160;of&#160;80</text>
+<text x="440.0" y="226" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">ChangeReader:&#160;from&#160;A&#160;to&#160;B,&#160;a&#160;P%&#160;increase,</text>
+<text x="440.0" y="244" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">points&#160;vs&#160;percent,&#160;direction&#160;words</text>
+<rect x="630" y="90" width="280" height="190" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+<text x="770.0" y="114" fill="#f8fafc" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">ArithmeticEvaluator</text>
+<text x="770.0" y="136" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">recomputes&#160;in&#160;Decimal,&#160;exactly</text>
+<text x="770.0" y="154" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">quantum:&#160;one&#160;step&#160;of&#160;the&#160;last&#160;written&#160;digit</text>
+<text x="770.0" y="172" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">rounded&#160;half&#160;up&#160;or&#160;half&#160;to&#160;even:&#160;holds</text>
+<text x="770.0" y="190" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">cut&#160;short&#160;with&#160;...:&#160;holds</text>
+<text x="770.0" y="208" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">&#8776;&#160;/&#160;about:&#160;within&#160;the&#160;policy&#160;tolerance</text>
+<text x="770.0" y="226" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">one&#160;step&#160;off:&#160;misrounded</text>
+<text x="770.0" y="244" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">change:&#160;magnitude,&#160;direction,&#160;points</text>
+<rect x="950" y="90" width="200" height="190" rx="8" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+<text x="1050.0" y="114" fill="#f8fafc" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">ArithmeticReport</text>
+<text x="1050.0" y="136" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">verdict:&#160;noArithmetic,</text>
+<text x="1050.0" y="154" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">verified,&#160;caution,&#160;wrong</text>
+<text x="1050.0" y="172" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">corrections&#160;with&#160;the</text>
+<text x="1050.0" y="190" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">right&#160;value</text>
+<text x="1050.0" y="208" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">note&#160;for&#160;the&#160;reader</text>
+<text x="1050.0" y="226" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">feedback&#160;for&#160;the&#160;model</text>
+<text x="1050.0" y="244" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">summary&#160;for&#160;a&#160;trace</text>
+<rect x="630" y="320" width="280" height="110" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+<text x="770.0" y="344" fill="#f8fafc" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">ArithmeticLedger&#160;(actor)</text>
+<text x="770.0" y="366" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">one&#160;per&#160;conversation</text>
+<text x="770.0" y="384" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">the&#160;same&#160;wrong&#160;result&#160;stated&#160;again</text>
+<text x="770.0" y="402" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">after&#160;a&#160;correction:&#160;marked&#160;repeated</text>
+<text x="770.0" y="420" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">reviews,&#160;results,&#160;flagged,&#160;repeated</text>
+<rect x="290" y="320" width="300" height="110" rx="8" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="440.0" y="344" fill="#f8fafc" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">ArithmeticPolicy</text>
+<text x="440.0" y="366" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">.standard:&#160;&#8776;&#160;within&#160;1%,&#160;misrounding&#160;flagged</text>
+<text x="440.0" y="384" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">.lenient:&#160;&#8776;&#160;within&#160;5%,&#160;misrounding&#160;passes</text>
+<text x="440.0" y="402" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">.strict:&#160;&#8776;&#160;must&#160;still&#160;round&#160;as&#160;written</text>
+<text x="440.0" y="420" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">readsPercentChanges</text>
+<line x1="250" y1="140" x2="288" y2="140" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="590" y1="185" x2="628" y2="185" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="910" y1="185" x2="948" y2="185" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="770" y1="280" x2="770" y2="318" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="590" y1="375" x2="628" y2="375" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="30" y="475" fill="#94a3b8" font-family="Helvetica, Arial, sans-serif" font-size="13">outcomes&#160;(green&#160;holds,&#160;amber&#160;caution,&#160;red&#160;wrong):</text>
+<rect x="30" y="490" width="67.0" height="30" rx="6" fill="#1e293b" stroke="#86efac" stroke-width="1.5"/>
+<text x="63.5" y="510" fill="#86efac" font-family="Menlo, monospace" font-size="13" text-anchor="middle">exact</text>
+<rect x="109.0" y="490" width="83.39999999999999" height="30" rx="6" fill="#1e293b" stroke="#86efac" stroke-width="1.5"/>
+<text x="150.7" y="510" fill="#86efac" font-family="Menlo, monospace" font-size="13" text-anchor="middle">rounded</text>
+<rect x="204.39999999999998" y="490" width="116.19999999999999" height="30" rx="6" fill="#1e293b" stroke="#86efac" stroke-width="1.5"/>
+<text x="262.5" y="510" fill="#86efac" font-family="Menlo, monospace" font-size="13" text-anchor="middle">approximate</text>
+<rect x="332.59999999999997" y="490" width="108.0" height="30" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+<text x="386.59999999999997" y="510" fill="#fbbf24" font-family="Menlo, monospace" font-size="13" text-anchor="middle">misrounded</text>
+<rect x="452.59999999999997" y="490" width="149.0" height="30" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+<text x="527.0999999999999" y="510" fill="#fbbf24" font-family="Menlo, monospace" font-size="13" text-anchor="middle">pointsAsPercent</text>
+<rect x="613.5999999999999" y="490" width="67.0" height="30" rx="6" fill="#1e293b" stroke="#f87171" stroke-width="1.5"/>
+<text x="647.0999999999999" y="510" fill="#f87171" font-family="Menlo, monospace" font-size="13" text-anchor="middle">wrong</text>
+<rect x="692.5999999999999" y="490" width="140.79999999999998" height="30" rx="6" fill="#1e293b" stroke="#f87171" stroke-width="1.5"/>
+<text x="762.9999999999999" y="510" fill="#f87171" font-family="Menlo, monospace" font-size="13" text-anchor="middle">wrongDirection</text>
+<rect x="845.3999999999999" y="490" width="99.8" height="30" rx="6" fill="#1e293b" stroke="#f87171" stroke-width="1.5"/>
+<text x="895.2999999999998" y="510" fill="#f87171" font-family="Menlo, monospace" font-size="13" text-anchor="middle">undefined</text>
+</svg>

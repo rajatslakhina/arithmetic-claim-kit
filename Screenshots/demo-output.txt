@@ -1,0 +1,79 @@
+ArithmeticClaimKit demo: stated arithmetic, recomputed exactly
+
+[1] A tip, and the total that depends on it
+    asked: "Dinner was $80. What is a 15% tip, and what do I pay in all?"
+    answer: "A 15% tip is 15% of $80, which is $14. So you pay $80 + $14 = $94."
+    XX 15% of $80, which is $14  ->  wrong
+    ok $80 + $14 = $94  ->  exact
+    verdict: wrong (2 results checked, 1 hold, 1 wrong)
+    ($94 is right for $80 + $14, and wrong as the bill: the feedback asks for dependent figures too.)
+    feedback to the model:
+      Some arithmetic in your answer does not hold:
+      - 15% of $80 is $12, not $14.
+      Recompute each of these, correct every figure that depends on them, and keep the rest of the answer as it is.
+    rewrite: "A 15% tip is 15% of $80, which is $12. So you pay $80 + $12 = $92."
+    ok 15% of $80, which is $12  ->  exact
+    ok $80 + $12 = $92  ->  exact
+    verdict: verified (2 results checked, 2 hold)
+
+[2] A run-on chain
+    answer: "Three dozen eggs and five more: 3 × 12 = 36 + 5 = 42 eggs."
+    ok 3 × 12 = 36  ->  exact
+    XX 36 + 5 = 42  ->  wrong
+    verdict: wrong (2 results checked, 1 hold, 1 wrong)
+    Arithmetic check: 36 + 5 is 41, not 42.
+
+[3] Percentage changes
+    answer: "Revenue went from $40k to $50k, a 20% increase. Churn fell from 5% to 4%, a 1% decrease. Signups dropped from 200 to 250, a 25% decrease."
+    XX from $40k to $50k, a 20% increase  ->  wrong
+    ?? from 5% to 4%, a 1% decrease  ->  points written as a percent
+    XX from 200 to 250, a 25% decrease  ->  wrong direction
+    verdict: wrong (3 results checked, 0 hold, 1 to check, 2 wrong)
+    - from $40k to $50k is a 25% increase, not a 20% increase.
+    - from 5% to 4% is 1 percentage point but a 20% decrease; "a 1% decrease" reads the points as a percent.
+    - from 200 to 250 is a 25% increase, not a 25% decrease.
+
+[4] Rounding
+    answer: "Split three ways, $100 / 3 = $33.34 each. Two thirds is 2/3 ≈ 0.67, and 22 / 7 = 3.14… is close to pi."
+    ?? $100 / 3 = $33.34  ->  misrounded
+    ok 2/3 ≈ 0.67  ->  rounded as written
+    ok 22 / 7 = 3.14…  ->  rounded as written
+    verdict: caution (3 results checked, 2 hold, 1 to check)
+    Arithmetic check: $100 / 3 is about $33.3333, which rounds to $33.33, not $33.34.
+    under .lenient: verified (3 results checked, 3 hold)
+
+[5] LaTeX
+    answer: "Three quarters of 80 is $\frac{3}{4} \times 80 = 60$, and $12^2 = 124$."
+    ok \frac{3}{4} \times 80 = 60  ->  exact
+    XX 12^2 = 124  ->  wrong
+    verdict: wrong (2 results checked, 1 hold, 1 wrong)
+    Arithmetic check: 12^2 is 144, not 124.
+
+[6] What is left alone
+    | - Solve 2x + 3 = 13 for x.
+    | - The release is on 2026-11-02.
+    | - A 15% tip on $80 is $14.
+    | ```python
+    | total = 3 + 4  # = 8
+    | ```
+    results read: 0 (algebra, a date, code, and "tip on" are not read as arithmetic)
+
+[7] Approximations, by policy
+    answer: "1000 / 7 is about 140, and 100 / 3 is about 33.3."
+    standard: 1000 / 7: wrong, 100 / 3: holds -> wrong
+    lenient: 1000 / 7: holds, 100 / 3: holds -> verified
+    strict: 1000 / 7: wrong, 100 / 3: holds -> wrong
+
+[8] A conversation: the same mistake twice
+    turn 1: "A 20% discount takes 20% of $45, which is $8, off the price."
+    XX 20% of $45, which is $8  ->  wrong
+    verdict: wrong (1 result checked, 0 hold, 1 wrong)
+    turn 2: "You're right to ask. The discount is 20% of $45, which is $8."
+    XX 20% of $45, which is $8  ->  wrong
+    verdict: wrong (1 result checked, 0 hold, 1 wrong, 1 repeated)
+    Arithmetic check: 20% of $45 is $9, not $8. Some of this was stated again after a correction was asked for.
+    turn 3: "Correction: 20% of $45 is $9, so you pay $45 - $9 = $36."
+    ok 20% of $45 is $9  ->  exact
+    ok $45 - $9 = $36  ->  exact
+    verdict: verified (2 results checked, 2 hold)
+    ledger: 3 reviews, 4 results, 2 flagged, 1 repeated
